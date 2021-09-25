@@ -70,6 +70,7 @@ paq "aonemd/kuroi.vim"
 paq "srcery-colors/srcery-vim"
 paq "pineapplegiant/spaceduck"
 paq "sunjon/Shade.nvim"
+paq "folke/tokyonight.nvim"
 
     -- my plugins
 paq "Jack3G/widthguide"
