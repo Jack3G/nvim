@@ -12,68 +12,67 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 
-vim.cmd("packadd paq-nvim")
-local paq = require("paq-nvim").paq
+require "paq" {
 
-paq {'savq/paq-nvim', opt = true}
+    {'savq/paq-nvim', opt = true},
 
+    -- dependencies or beeg usefull stuff --
+    "kyazdani42/nvim-web-devicons",
+    "sheerun/vim-polyglot",
+    "nvim-lua/popup.nvim",
+    "nvim-lua/plenary.nvim",
+    "equalsraf/neovim-gui-shim",
 
--- dependencies or beeg usefull stuff
-paq "kyazdani42/nvim-web-devicons"
-paq "sheerun/vim-polyglot"
-paq "nvim-lua/popup.nvim"
-paq "nvim-lua/plenary.nvim"
-paq "equalsraf/neovim-gui-shim"
+    -- Status Line and other stuff --
+    {"glepnir/galaxyline.nvim", branch = "main"},
+    -- {"vim-airline/vim-airline", opt = true},
+    "romgrk/barbar.nvim",
 
-    -- Status Line and other stuff
-paq {"glepnir/galaxyline.nvim", branch = "main"}
-paq {"vim-airline/vim-airline", opt = true}
-paq "romgrk/barbar.nvim"
+    "mhinz/vim-startify",
+    -- "glepnir/dashboard-nvim",
 
-paq "mhinz/vim-startify"
---paq "glepnir/dashboard-nvim"
+    -- Functional --
+    "maxboisvert/vim-simple-complete",
+    -- "airblade/vim-gitgutter",
+    "tpope/vim-surround",
+    "psliwka/vim-smoothie",
+    {"lukas-reineke/indent-blankline.nvim"},
+    "tpope/vim-commentary",
+    "junegunn/goyo.vim",
+    "pgdouyon/vim-evanesco",
+    "junegunn/vim-easy-align",
+    "kyazdani42/nvim-tree.lua",
+    "rafcamlet/nvim-luapad",
+    "neovim/nvim-lspconfig",
+    "sumneko/lua-language-server",
+    "vimwiki/vimwiki",
+    "alec-gibson/nvim-tetris",
 
-    -- Functional
-paq "maxboisvert/vim-simple-complete"
---paq "airblade/vim-gitgutter"
-paq "tpope/vim-surround"
-paq "psliwka/vim-smoothie"
-paq {"lukas-reineke/indent-blankline.nvim"}
-paq "tpope/vim-commentary"
-paq "junegunn/goyo.vim"
-paq "junegunn/vim-slash" --make searching a bit better
-paq "junegunn/vim-easy-align"
-paq "kyazdani42/nvim-tree.lua"
-paq "rafcamlet/nvim-luapad"
-paq "neovim/nvim-lspconfig"
-paq "sumneko/lua-language-server"
-paq "vimwiki/vimwiki"
-paq "alec-gibson/nvim-tetris"
+    -- Languages --
+    -- Freezes on BufWrite autocmd for formatting
+    -- "rust-lang/rust.vim",
+    "vhyrro/neorg",
 
-    -- Languages
--- Freezes on BufWrite autocmd for formatting
---paq "rust-lang/rust.vim"
-paq "vhyrro/neorg"
-
-    -- Looks
-paq "vim-airline/vim-airline-themes"
-paq {"sonph/onehalf", rtp = "vim" }
-paq "morhetz/gruvbox"
-paq "phanviet/vim-monokai-pro"
-paq "sainnhe/everforest"
-paq "norcalli/nvim-colorizer.lua"
-paq "drewtempelmeyer/palenight.vim"
-paq "joshdick/onedark.vim"
-paq "KeitaNakamura/neodark.vim"
-paq "mhinz/vim-janah"
-paq "aonemd/kuroi.vim"
-paq "srcery-colors/srcery-vim"
-paq "pineapplegiant/spaceduck"
-paq "sunjon/Shade.nvim"
-paq "folke/tokyonight.nvim"
+    -- Looks --
+    "vim-airline/vim-airline-themes",
+    {"sonph/onehalf", rtp = "vim" },
+    "morhetz/gruvbox",
+    "phanviet/vim-monokai-pro",
+    "sainnhe/everforest",
+    "norcalli/nvim-colorizer.lua",
+    "drewtempelmeyer/palenight.vim",
+    "joshdick/onedark.vim",
+    "KeitaNakamura/neodark.vim",
+    "mhinz/vim-janah",
+    "aonemd/kuroi.vim",
+    "srcery-colors/srcery-vim",
+    "pineapplegiant/spaceduck",
+    "sunjon/Shade.nvim",
+    "folke/tokyonight.nvim",
 
     -- my plugins
-paq "Jack3G/widthguide"
+    "Jack3G/widthguide",
+}
 
 require("widthguide").enable()
 
