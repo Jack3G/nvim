@@ -23,13 +23,15 @@ require "paq" {
     "nvim-lua/plenary.nvim",
     "equalsraf/neovim-gui-shim",
 
+
     -- Status Line and other stuff --
     {"glepnir/galaxyline.nvim", branch = "main"},
     -- {"vim-airline/vim-airline", opt = true},
     "romgrk/barbar.nvim",
-
     "mhinz/vim-startify",
     -- "glepnir/dashboard-nvim",
+    "nvim-telescope/telescope.nvim",
+
 
     -- Functional --
     "maxboisvert/vim-simple-complete",
@@ -47,11 +49,13 @@ require "paq" {
     "sumneko/lua-language-server",
     "vimwiki/vimwiki",
     "alec-gibson/nvim-tetris",
+    "nvim-treesitter/nvim-treesitter",
 
     -- Languages --
     -- Freezes on BufWrite autocmd for formatting
     -- "rust-lang/rust.vim",
     "vhyrro/neorg",
+    "ron-rs/ron.vim",
 
     -- Looks --
     "vim-airline/vim-airline-themes",
@@ -116,7 +120,7 @@ vim.o.spelllang = "en_au"
 
 vim.g["neodark#background"] = "#202020"
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme gruvbox")
 --vim.cmd([[
     --if (has("gui"))
         --colo palenight
@@ -207,15 +211,15 @@ map("x", " ", "", nore)
 
 map("n", "<Leader>fP", ":e ~/.config/nvim/",                     nore)
 map("n", "<Leader>fp", ":e ~/.local/share/nvim-data/site/pack/", nore)
-map("n", "<Leader>fg", ":e ~/Documents/code/go/src/",            nore)
 map("n", "<Leader>b",  ":ls<CR>:b<Space>",                       nore)
 map("n", "<Leader>`",  "<C-^>",                                  nore_silent)
 map("n", "<Leader>l",  ":luafile ~/.config/nvim/init.lua<CR>",   nore)
 map("n", "<Leader>s",  ":set spell!<CR>",                        nore)
 
 ---- Plugin bindings
-map("n", "<Leader>tt", ":NvimTreeToggle<CR>",    nore_silent)
-map("n", "<Leader>tr", ":NvimTreeRefresh<CR>",   nore_silent)
+map("n", "<Leader>tt", ":NvimTreeToggle<CR>",       nore_silent)
+map("n", "<Leader>tr", ":NvimTreeRefresh<CR>",      nore_silent)
+map("n", "<Leader>ff", ":Telescope find_files<CR>", nore)
 
 map("n", "<Left>",    ":BufferPrevious<CR>",     nore_silent)
 map("n", "<Right>",   ":BufferNext<CR>",         nore_silent)
