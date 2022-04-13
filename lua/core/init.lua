@@ -16,7 +16,7 @@ require "paq" {
 
     {'savq/paq-nvim', opt = true},
 
-    -- dependencies or beeg usefull stuff --
+    -- dependencies or beeg useful stuff --
     "kyazdani42/nvim-web-devicons",
     "sheerun/vim-polyglot",
     "nvim-lua/popup.nvim",
