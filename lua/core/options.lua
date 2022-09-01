@@ -27,6 +27,7 @@ vim.wo.wrap = false
 vim.wo.relativenumber = true
 vim.wo.conceallevel = 2
 vim.wo.signcolumn = "number"
+vim.wo.linebreak = true
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -34,3 +35,16 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.spelllang = "en_au"
 vim.o.spell = true
+
+-- function _G.options_on_buf_add()
+--     if vim.bo.buftype == "terminal" then
+--         vim.cmd("split")
+--     end
+-- end
+
+-- vim.cmd([[
+--     augroup config_options
+--     au!
+--     au BufAdd * v:options_on_buf_add()
+--     augroup END
+-- ]])

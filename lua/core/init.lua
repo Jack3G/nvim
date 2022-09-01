@@ -49,12 +49,14 @@ require "paq" {
     "vimwiki/vimwiki",
     "alec-gibson/nvim-tetris",
     "nvim-treesitter/nvim-treesitter",
+    "easymotion/vim-easymotion",
 
     -- Languages --
     -- Freezes on BufWrite autocmd for formatting
     -- "rust-lang/rust.vim",
-    "vhyrro/neorg",
+    -- "vhyrro/neorg",
     "ron-rs/ron.vim",
+    "quabug/vim-gdscript",
 
     -- Looks --
     "vim-airline/vim-airline-themes",
@@ -102,21 +104,21 @@ vim.g["widthguide_warn_column"] = 65
 
 require("colorizer").setup()
 
-require("neorg").setup {
-    -- Tell Neorg what modules to load
-    load = {
-        -- ["core.defaults"] = {}, -- Load all the default modules
-        ["core.neorgcmd"] = {},
-        ["core.keybinds"] = {},
-        ["core.mode"] = {},
-        ["core.norg.qol.todo_items"] = {},
-        ["core.norg.esupports"] = {},
-        ["core.integrations.treesitter"] = {},
+-- require("neorg").setup {
+--     -- Tell Neorg what modules to load
+--     load = {
+--         -- ["core.defaults"] = {}, -- Load all the default modules
+--         ["core.neorgcmd"] = {},
+--         ["core.keybinds"] = {},
+--         ["core.mode"] = {},
+--         ["core.norg.qol.todo_items"] = {},
+--         ["core.norg.esupports"] = {},
+--         ["core.integrations.treesitter"] = {},
 
-        ["core.norg.concealer"] = {}, -- Allows for use of icons
-        -- ["core.norg.dirman"] = {}, -- Manage your directories with Neorg
-    },
-}
+--         ["core.norg.concealer"] = {}, -- Allows for use of icons
+--         -- ["core.norg.dirman"] = {}, -- Manage your directories with Neorg
+--     },
+-- }
 
 -- vim.g["airline_powerline_fonts"] = 1
 
